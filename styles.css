@@ -1,0 +1,15 @@
+body{
+    background: linear-gradient(to right,rgb(243, 72, 101) ,rgb(252, 215, 222))
+}
+  
+
+#container_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gradie_block{
+    justify-content: center;
+    align-items: center;
+}
