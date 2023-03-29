@@ -1,43 +1,165 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
-
 html {
     font-size: 10px;
     height: 100%;
+    width: 100%; 
+    box-sizing: border-box;
+     
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
 
 body {
     background: linear-gradient(to right,rgb(243, 72, 101) ,rgb(252, 215, 222));
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex; 
+    
     justify-content: center;
     align-items: center;
 }
-  
-img { width: 100%; }
 
-#container_flex {
+img { 
+    width: 100%; 
+    padding-top: 46px;
+}
+
+img:hover{
+    transform: rotateY(35deg);
+}
+
+ 
+button{
+    width: 100%;
+    height: 70px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color:  #1d3347;
+    font-size: 2em;
+    color: white;
+    margin-top: 10px;
+}
+
+#container_flex{
+    
     display: flex;
-    flex-flow: row wrap;
-    height: 65%;
-    width: 80%;
-    border: 1px solid #e0e0e0;
+    height: 60%;
+    width: 1000px;
+    border: 1px solid none;
     border-radius: 10px;
+    
+    max-width: 100%;
 }
 
 #gradie_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #1d3347;
+    border: 1.5px solid black;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    width: 50%;
+}
+
+.graddie_text{
+    width: 400px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px; 
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+     
+}
+
+.gradie_title{
+    font-size: 5em;
+    color: white;
+    padding-bottom: 10px;
+}
+
+.gradie_pagraph{
+    font-size: 2.3em;
+    color: #639bcf;
+}
+
+.graddie_image{
+    text-align: center;
+    perspective: 1200px;
 }
 
 #login_block {
-    flex-grow: 1;
+    display: flex;
     background-color: #f2f2f2;
+    border: 1.5px solid rgb(219, 216, 216);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    border-color: none;
+    width: 44%;    
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.case{
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 25px;
+    padding-left: 7px;
+
+    width: 100%;
+    height: 17%;
+}
+
+.container_login_block{
+    width: 80%;
+    height: 95%;
+    justify-content: center;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_tittle{
+    font-size: 5em;
+    padding-bottom: 10px;
+}
+
+.text_size{
+    font-size: 2em;
+}
+
+.terms_condition_form{
+    display: flex; 
+    margin-top: 20px;   
+}
+
+.password_form{
+    margin-top: 20px;
+}
+
+a{
+    color: #1d3347;
+    font-weight: bold;
+}
+
+.checkbox{
+    padding-top: 4.3px;
+    padding-right: 4px;
+}
+
+.rectangle{
+    width: 100%;
+    height: 50px;    
+    font-size: 20px;
+    border-radius: 5px;
+    border: 0.5px solid black;
+    margin-top: 20px;
 }
