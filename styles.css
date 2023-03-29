@@ -24,7 +24,7 @@ body {
 }
 
 img { 
-    width: 100%; 
+    width: auto; 
     padding-top: 39px;
     max-width: 100%; 
 }
@@ -43,6 +43,11 @@ button{
     font-size: 2em;
     color: white;
     margin-top: 10px;
+}
+
+button:hover {
+    background-color: rgb(0, 153, 255);
+    transition: background-color 0.5s ease-out;
 }
 
 a{
@@ -88,10 +93,6 @@ button:after{
 
 /* Aca termina */
 
-button:hover {
-    background-color: rgb(0, 153, 255);
-    transition: background-color 0.5s ease-out;
-}
 
 #container_flex{
     
@@ -210,9 +211,21 @@ button:hover {
 }
 
 
+/* Deskop 1024 */
+
+@media screen and (max-width: 1024px) {
+    img { 
+        width: 450px; 
+        padding-top: 39px;
+        padding-bottom: 9px; 
+        max-width: 100%;
+    }
+}
+
+
 /* TABLET */
 
-@media screen and (max-width: 920px){
+@media screen and (max-width: 768px){
 
     #container_flex{
         
@@ -220,6 +233,8 @@ button:hover {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 90%;
+        height: 90%;
 
     }
 
@@ -232,7 +247,9 @@ button:hover {
         align-items: center;
         background-color: #1d3347;
         border: 1.5px solid black;
-        width: 50%;
+        width: 400px;
+        height: 400px;
+        max-width: 100%; 
     }
 
     #login_block {
@@ -244,30 +261,63 @@ button:hover {
         border-bottom-right-radius: 0px;
         justify-content: center;
         align-items: center; 
+        width: 400px; 
+        height: 400px;   
         max-width: 100%; 
-        width: 50%;    
     }
 
     .rectangle{
         width: 100%;
-        height: 50px;    
+        height: 40px;    
         font-size: 20px;
         border-radius: 5px;
         border: 0.5px solid black;
         margin-top: 20px;
         max-width: 100%;
     }
+
+    img{
+        width: 350px;
+        padding-bottom: 44px;
+    }
+    
+    button{
+        width: 100%;
+        height: 130%;
+        font-size: 1.5em;   
+    }
+    
+    .gradie_title{
+        font-size: 3em;
+    }
+
+    .gradie_pagraph{
+        font-size: 2em;
+    }
+
+    .login_tittle{
+        font-size: 3em;
+    }
+
+    .password_text{
+        padding-top: 5px;
+    }
+
+    .terms_condition_form{
+        padding-top: 15px;
+    }
+
+    .text_size{
+        font-size: 1.5em;
+    }
 }
 
 
 /* MOBILE */
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 425px) {
     
-    body{
-        background-color: none;
-    }
-
+     
     #gradie_block {
         display: flex;
         flex-direction: column;
@@ -293,12 +343,46 @@ button:hover {
 
     .rectangle{
         width: 100%;
-        height: 50px;    
-        font-size: 20px;
+        height: 30px;    
+        font-size: 1.25em;
         border-radius: 5px;
         border: 0.5px solid black;
         margin-top: 20px;
         max-width: 100%;
     }
      
+    /* img{
+        width: 400px;
+        padding-top: 70px;
+    }
+    
+    button{
+        width: 100%;
+        height: 130%;
+        font-size: 1.5em;   
+    } */
+    
+    .gradie_title{
+        font-size: 2.5em;
+    }
+
+    .gradie_pagraph{
+        font-size: 1.5em;
+    }
+
+    .login_tittle{
+        font-size: 2.5em;
+    }
+
+    .password_text{
+        padding-top: 5px;
+    }
+
+    .terms_condition_form{
+        padding-top: 15px;
+    }
+
+    .text_size{
+        font-size: 1.25em;
+    }
 }
