@@ -3,7 +3,7 @@ html {
     height: 100%;
     width: 100%; 
     box-sizing: border-box;
-     
+    
 }
 
 * {
@@ -25,14 +25,15 @@ body {
 
 img { 
     width: 100%; 
-    padding-top: 46px;
+    padding-top: 39px;
+    max-width: 100%; 
 }
 
 img:hover{
     transform: rotateY(35deg);
 }
 
- 
+
 button{
     width: 100%;
     height: 70px;
@@ -42,6 +43,54 @@ button{
     font-size: 2em;
     color: white;
     margin-top: 10px;
+}
+
+a{
+    color: #1d3347;
+    font-weight: bold;
+}
+
+/* Animacion */
+
+button:before, button:after{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    background: linear-gradient(120deg, green, purple, blue, red,
+    pink, orange, skyblue, yellow, green, red);
+    background-size: 300%;
+    width: calc(100% + 16px);
+    height: calc(100% + 16px);
+    z-index: -1;
+    animation: BGgradient 15s ease infinite;
+}
+
+@keyframes BGgradient {
+    0%{
+        background-position: 0% 200%;
+    }
+
+    50%{
+        background-position: 200% 0%;
+    }
+
+    100%{
+        background-position: 0% 330%;
+    }
+}
+
+button:after{
+    filter: brightness(1.4);
+    filter: drop-shadow(16px 16px 20px yellow);
+    filter: blur(15px);
+}
+
+/* Aca termina */
+
+button:hover {
+    background-color: rgb(0, 153, 255);
+    transition: background-color 0.5s ease-out;
 }
 
 #container_flex{
@@ -76,7 +125,7 @@ button{
     padding-top: 80px;
     display: flex;
     flex-direction: column;
-     
+    max-width: 100%; 
 }
 
 .gradie_title{
@@ -105,7 +154,7 @@ button{
     width: 44%;    
     justify-content: center;
     align-items: center; 
-
+    max-width: 100%; 
 }
 
 .case{
@@ -145,10 +194,6 @@ button{
     margin-top: 20px;
 }
 
-a{
-    color: #1d3347;
-    font-weight: bold;
-}
 
 .checkbox{
     padding-top: 4.3px;
@@ -162,4 +207,98 @@ a{
     border-radius: 5px;
     border: 0.5px solid black;
     margin-top: 20px;
+}
+
+
+/* TABLET */
+
+@media screen and (max-width: 920px){
+
+    #container_flex{
+        
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #gradie_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        align-items: center;
+        background-color: #1d3347;
+        border: 1.5px solid black;
+        width: 50%;
+    }
+
+    #login_block {
+        display: flex;
+        background-color: #f2f2f2;
+        border: 1.5px solid rgb(219, 216, 216);
+        border-color: none;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        justify-content: center;
+        align-items: center; 
+        max-width: 100%; 
+        width: 50%;    
+    }
+
+    .rectangle{
+        width: 100%;
+        height: 50px;    
+        font-size: 20px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 720px) {
+    
+    body{
+        background-color: none;
+    }
+
+    #gradie_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1d3347;
+        border: 1.5px solid black;
+        width: 50%;
+    }
+
+
+
+    #login_block {
+        display: flex;
+        background-color: #f2f2f2;
+        border: 1.5px solid rgb(219, 216, 216);
+        border-color: none; 
+        justify-content: center;
+        align-items: center; 
+        max-width: 100%; 
+        width: 50%;    
+    }
+
+    .rectangle{
+        width: 100%;
+        height: 50px;    
+        font-size: 20px;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        margin-top: 20px;
+        max-width: 100%;
+    }
+     
 }
